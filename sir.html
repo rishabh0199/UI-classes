@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head2{color:pink}
+        .head{color:rgb(59, 66, 59) !important}
+        div{margin:10px 0}
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+        }
+        label, span{color: white; font-weight: 700;}
+    </style>
+</head>
+<body>
+    <div>
+        <form name="form1" action="submit.html" method="get" autocomplete="true">
+            <div>
+                <label for="age">Name:</label>
+                <input id="forname" type="text" placeholder="Enter Your Name" />
+            </div>
+            <div>
+                <label for="address">address:</label>
+                <input id="address" type="text" name="address" placeholder="Enter Your Name" >
+            </div>
+            <div>
+                <label>age:</label>
+                <input type="number" name="age" id="age" placeholder="Enter Your age" />
+            </div>
+            <div>
+                <textarea name="message" rows="15" cols="50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro reprehenderit quos ea nesciunt, officiis nisi facilis assumenda praesentium voluptate sapiente labore dolorum accusamus officia vel esse enim cumque. Totam.
+                </textarea>
+            </div>
+            
+            <select name="selectBox">
+                <option value="one">one</option>
+                <option value="two">Mango</option>
+                <option value="three">three</option>
+                <option value="four">four</option>
+                <option value="five">five</option>
+            </select>
+            <label for="password">Password</label>
+            <input type="checkbox" name="check" /><br/>
+            
+            <!-- <input type="radio" name="group1" id="r1" value="1" />
+            <label for="r1"> One</label> -->
+           
+            <!-- <input type="radio" name="group1" id="r1" value="1"  />
+            <lable for="r1">One</lable> -->
+            
+            <input type="radio" name="group1" id="name1" value="One" /><label for="name1"> One</label>
+        <input type="radio" name="group1" id="name3" value="Two" /><label for="name3"> Two</label>
+        <input type="radio" name="group1" id="name2" value="One" /><label for="name2"> Three</label>
+            <input type="password" name="passward" id="password" />
+            <input type="date" name="date" />
+            <input type="email" name="email" />
+            <button type="submit">Submit</button>
+            
+        </form>
+
+    </div>
+</body>
+</html>
