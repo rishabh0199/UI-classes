@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        .grandFather{background-color: chartreuse;color:black;padding:100px}
+        .father{background-color: rgb(14, 161, 83);color:black;padding:100px}
+        .child{background-color: rgb(119, 17, 25);color:black;padding:100px}
+    </style>
+    <script>
+        var grandFather = document.querySelector('.grandFather');
+        var father = document.querySelector('.father');
+        var child = document.querySelector('.father');
+
+        console.log(grandFather);
+        console.log(father);
+        console.log(child);
+    </script>
+</head>
+<body>
+    <div class="grandFather">
+        GRAND FATHER
+        <div class="father">
+            FATHER
+            <div class="child">CHILD</div>
+        </div>
+    </div>
+    <script>
+        var grandFather = document.querySelector('.grandFather');
+        var father = document.querySelector('.father');
+        var child = document.querySelector('.child');
+
+        grandFather.addEventListener('click', xyz =>{
+            console.log('grand father',xyz.target);
+        }, {capture:true})
+
+        grandFather.addEventListener('click', xyz =>{
+            console.log('grand father',xyz.target);
+        })
+
+        father.addEventListener('click', xyz =>{
+            console.log('father', xyz.target);
+        }, {capture:true})
+
+        father.addEventListener('click', xyz =>{
+            console.log('father', xyz.target);
+        })
+
+        child.addEventListener('click', xyz =>{
+            console.log('child', xyz.target);
+        }, {capture:true})
+
+        child.addEventListener('click', xyz =>{
+            console.log('child', xyz.target);
+        })
+
+
+        // Call Back Function
+        function hello(){
+            console.log('Hello, how r u ?');
+        }
+
+        function anyName(xyzCallBack){
+            xyzCallBack();
+        }
+
+        anyName(hello);
+
+        var arr1 = [5,5,6,6,7,7];
+
+        var arr2 = [];
+        arr1.forEach(element => {
+            if(!arr2.includes(element)){
+                arr2.push(element);
+            }
+        });
+
+        var arr3 = [];
+        arr3 = arr1.filter((item, index) =>{
+            return arr1.indexOf(item) === index;
+        })
+
+        console.log(arr3);
+
+
+    </script>
+</body>
+</html>
